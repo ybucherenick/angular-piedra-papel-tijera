@@ -1,4 +1,4 @@
-<div class="container" ng-init="init();">
+<div class="container">
     <div class="py-5 text-center">
         <h2>Juego</h2>
         <p class="lead">Piedra - Papel - Tijera - Otros..</p>
@@ -7,25 +7,27 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
-        <div class="card">
-            <div class="card-body">
-                <p>
-                    <button type="button" class="btn btn-outline-info" style="width: 100%">NUEVO JUEGO</button>
-                </p>
-                <p>
-                    <button type="button" class="btn btn-outline-info" style="width: 100%">MOVIMIENTOS</button>
-                </p>
-                <p>
-                    <button type="button" class="btn btn-outline-info" style="width: 100%">HISTORICO</button>
-                </p>
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        <button type="button" class="btn btn-outline-info" style="width: 100%"
+                            ng-click="ir('nuevo_juego')">NUEVO JUEGO</button>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-outline-info" style="width: 100%"
+                            ng-click="ir('historico')">HISTÓRICO</button>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-outline-info" style="width: 100%"
+                            ng-click="ir('configuraciones')">CONFIGURACIONES</button>
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
         <div class="col-sm"></div>
     </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">© ybucherenick</p>
-  </footer>
+    <footer class="my-2 pt-2 text-muted text-center text-small">
+        <p class="mb-1">© ybucherenick</p>
+    </footer>
 </div>
-

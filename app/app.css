@@ -18,3 +18,15 @@ circle {
 .cus {
   text-align: center;
 }
+
+.hr-line-dashed {
+  border-top: 1px dashed #e7eaec;
+  color: #ffffff;
+  background-color: #ffffff;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.b-r {
+  border-right: 1px solid #e7eaec;
+}
