@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Histórico</h2>
+        <p class="lead">Piedra - Papel - Tijera - Otros..</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Ganador</th>
+                        <th scope="col">Jugador 1</th>
+                        <th scope="col">Jugador 2</th>
+                        <th scope="col">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="j in juego">
+                    <tr>
+                        <th>{{j.ganador}}</th>
+                        <td>{{j.jugador1}}</td>
+                        <td>{{j.jugador2}}</td>
+                        <td> <button type="button" class="btn btn-info btn-sm" ng-click="verDetalle(j.rounds)">Detalle</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Detalle-->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalle</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-sm text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Round</th>
+                                <th scope="col">Movimiento J1</th>
+                                <th scope="col">Movimiento J2</th>
+                                <th scope="col">Ganador</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="r in rounds">
+                            <tr>
+                                <th>{{r.numero}}</th>
+                                <td>{{r.movimiento1}}</td>
+                                <td>{{r.movimiento2}}</td>
+                                <td>{{r.ganador}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="my-2 pt-2 text-muted text-center text-small">
+        <p class="mb-1">© ybucherenick</p>
+    </footer>
+</div>
