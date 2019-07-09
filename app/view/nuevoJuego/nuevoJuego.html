@@ -1,0 +1,39 @@
+<div class="container">
+
+        <!-- NUEVO JUEGO-->
+
+        <div class="py-5 text-center">
+            <h2>Nuevo Juego</h2>
+            <p class="lead">Piedra - Papel - Tijera - Otros..</p>
+        </div>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="alert alert-warning alert-dismissible fade show" ng-if="validacion" role="alert">
+                    <strong>Atención!</strong> Ambos campos son obligatorios para poder continuar
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="cerrar()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <p> Ingresa los nombres de los jugadores</p>
+                <form>
+                    <div class="form-group">
+                        <label>Jugador 1</label>
+                        <input type="text" class="form-control" ng-model="juego.jugador1" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Jugador 2</label>
+                        <input type="text" class="form-control" ng-model="juego.jugador2" placeholder="Nombre">
+                    </div>
+                    <button type="submit" class="btn btn-info" style="width: 100%" ng-click="iniciarJuego()">INICIAR</button>
+                </form>
+                </div>
+            <div class="col-sm"></div>
+        </div>
+    
+    <footer class="my-2 pt-2 text-muted text-center text-small">
+        <p class="mb-1">© ybucherenick</p>
+    </footer>
+</div>
+    
+    
