@@ -1,0 +1,86 @@
+<div class="container">
+
+    <!-- NUEVO JUEGO-->
+
+    <div class="py-5 text-center">
+        <h2>Round {{rondaActual}}</h2>
+        <p class="lead">Piedra - Papel - Tijera - Otros..</p>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm b-r">
+            <h4>{{juego.jugador1}}</h4>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Seleccione movimiento:</label>
+                <select class="form-control" data-placeholder="Seleccione un movimiento.." ng-model="jugadas.jugador1"
+                    id="ronda_mov1" tabindex="4" ng-disabled="bloquearJ1">
+                    <option value="{{m.nombre}}" ng-repeat="m in listMovimiento1">{{m.nombre}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info" style="width: 100%" ng-click="jugada(1)"
+                ng-disabled="bloquearJ1">OK</button>
+        </div>
+        <div class="col-sm">
+            <h4>{{juego.jugador2}}</h4>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Seleccione movimiento:</label>
+                <select class="form-control" data-placeholder="Seleccione un movimiento.." ng-model="jugadas.jugador2"
+                    id="ronda_mov2" tabindex="4" ng-disabled="bloquearJ2">
+                    <option value="{{m.nombre}}" ng-repeat="m in listMovimiento1">{{m.nombre}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info" style="width: 100%" ng-click="jugada(2)"
+                ng-disabled="bloquearJ2">OK</button>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+    <div class="hr-line-dashed"></div>
+
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" ng-show="rondaActual > 1">
+            <h5 class="text-center">Puntuación</h5>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Round</th>
+                        <th scope="col">Ganador</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="r in juego.rounds">
+                    <tr ng-show="r.ganador != null">
+                        <th scope="row">{{r.numero}}</th>
+                        <td>{{r.ganador}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+
+
+    <!-- Modal Ganador-->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ganador!</h5>
+                </div>
+                <div class="modal-body">
+                    El ganador de juego es <strong>{{juego.ganador}}</strong>!!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info" ng-click="ir('inicio')">Ir al Inicio!</button>
+                    <button type="button" class="btn btn-info" ng-click="ir('jugar')">Jugar Otra!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="my-2 pt-2 text-muted text-center text-small">
+        <p class="mb-1">© ybucherenick</p>
+    </footer>
+</div>
