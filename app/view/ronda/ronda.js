@@ -29,7 +29,7 @@
                 $scope.juego = JSON.parse(window.localStorage.getItem('juego'));
                 $scope.contador = JSON.parse(window.localStorage.getItem('contador'));
                 
-                $PptClient.getmMovimientoTodos().then(function(_result){
+                $PptClient.getMovimientoTodos().then(function(_result){
                     $scope.listMovimiento1 = _result.data.movimiento;
                     $scope.listMovimiento2 = _result.data.movimiento;
                 }, function(_error){
@@ -182,6 +182,10 @@
                         window.location.href = "#/nuevoJuego";
                         break;
                 }
+            }
+
+            $scope.inicio = function(){
+                window.location.href = "#/";
             }
 
 

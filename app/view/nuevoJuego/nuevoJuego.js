@@ -50,6 +50,10 @@
             return retorno;
         }
 
+        $scope.inicio = function(){
+            window.location.href = "#/";
+        }
+
 
     }
   ]);

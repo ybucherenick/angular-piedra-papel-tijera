@@ -32,6 +32,10 @@
             }
 
 
+            $scope.inicio = function(){
+                window.location.href = "#/";
+            }
+
 
 
         }

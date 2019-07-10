@@ -1,7 +1,6 @@
 <div class="container">
 
-    <!-- NUEVO JUEGO-->
-
+    <button type="button" class="btn btn-info btn-init" ng-click="inicio()"><i class="fas fa-home"></i></button>
     <div class="py-5 text-center">
         <h2>Round {{rondaActual}}</h2>
         <p class="lead">Piedra - Papel - Tijera - Otros..</p>
@@ -10,7 +9,7 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm b-r">
-            <h4>{{juego.jugador1}}</h4>
+            <h4><i class="fas fa-user"></i> {{juego.jugador1}}</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Seleccione movimiento:</label>
                 <select class="form-control" data-placeholder="Seleccione un movimiento.." ng-model="jugadas.jugador1"
@@ -22,7 +21,7 @@
                 ng-disabled="bloquearJ1">OK</button>
         </div>
         <div class="col-sm">
-            <h4>{{juego.jugador2}}</h4>
+            <h4><i class="fas fa-user"></i> {{juego.jugador2}}</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Seleccione movimiento:</label>
                 <select class="form-control" data-placeholder="Seleccione un movimiento.." ng-model="jugadas.jugador2"

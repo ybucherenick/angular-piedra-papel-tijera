@@ -73,7 +73,7 @@
                         url: `${API}/movimiento`,
                         method: 'POST',
                         cache: false,
-                        params: params
+                        data: params
                     }).then(function(_response) {
                         defer.resolve(_response);
                     }, function(_error) {
@@ -88,7 +88,7 @@
                         url: `${API}/movimiento`,
                         method: 'PUT',
                         cache: false,
-                        params: params
+                        data: params
                     }).then(function(_response) {
                         defer.resolve(_response);
                     }, function(_error) {

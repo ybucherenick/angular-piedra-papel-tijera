@@ -1,4 +1,5 @@
 <div class="container">
+    <button type="button" class="btn btn-info btn-init" ng-click="inicio()"><i class="fas fa-home"></i></button>
     <div class="py-5 text-center">
         <h2>Histórico</h2>
         <p class="lead">Piedra - Papel - Tijera - Otros..</p>
@@ -20,7 +21,8 @@
                         <th>{{j.ganador}}</th>
                         <td>{{j.jugador1}}</td>
                         <td>{{j.jugador2}}</td>
-                        <td> <button type="button" class="btn btn-info btn-sm" ng-click="verDetalle(j.rounds)">Detalle</button> </td>
+                        <td> <button type="button" class="btn btn-outline-info"
+                                ng-click="verDetalle(j.rounds)"><i class="fas fa-file-alt"></i></button> </td>
                     </tr>
                 </tbody>
             </table>
